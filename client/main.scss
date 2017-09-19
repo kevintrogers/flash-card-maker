@@ -1,10 +1,20 @@
-
+$primary-color: limegreen;
+$secondary-color: lightgreen;
+$tertiary-color: yellow;
+$quaternary-color: darkgreen;
+$quinary-color: green;
+$light: #fff;
+$dark: #242424;
 body {
-    background: limegreen;
+    background: $primary-color;
     font-family: sans-serif;
 }
+h1 {
+    text-align: center;
+    color: $tertiary-color;
+}
 .welcome {
-    background: lightgreen;
+    background: $secondary-color;
     margin-left:auto;
     margin-right:auto;
     width:50%;
@@ -14,10 +24,29 @@ body {
 }
 
  p {
-    background: white;
+    background: $light;
     margin: auto;
     width:80%;
     border-radius:4px;
     height: 10em;
     padding:.5em 1.15em;
+}
+.scoreboard {
+    width: 25vw;
+    height: 35vh;
+    background: $light;
+    border: 15px solid $secondary-color;
+    border-radius:4px;
+    
+}
+.placard, .question-count{
+
+  color: $quinary-color;
+  text-align:center;
+}
+.health-meter {
+    background: $quaternary-color;
+    height: 1em;
+    width: 80%;
+    margin: .05em 1em;
 }
