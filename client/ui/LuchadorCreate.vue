@@ -17,13 +17,26 @@
                 <label for='luchador-mask-color'>Mask Color</label>
                 <input type='select' value='200' min='75' max='999' class='form-control' id='luchador-mask-color'>
             </div>
-                        <div class='form-group'>
+            <div class='form-group'>
                 <label for='luchador-trim-color'>Trim Color</label>
-                <input type='select' value='200' min='75' max='999' class='form-control' id='luchador-trim-color'>
+                <select class="custom-select" id='luchador-trim-color'>
+                  <option selected>Choose Trim Color</option>
+                  <option value="1">Green</option>
+                  <option value="2">Orange</option>
+                  <option value="3">Yellow</option>
+                </select>
             </div>
         </form>
     </div>
 </template>
 <script>
+export default {
+    data() {
+        return {
+            colors: ['orange','yellow','red','green','purple','blue','black','white']
+        }
+        
+    }
+}
     
 </script>
