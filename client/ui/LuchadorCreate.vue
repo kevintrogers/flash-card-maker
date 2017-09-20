@@ -15,15 +15,17 @@
             </div>
             <div class='form-group'>
                 <label for='luchador-mask-color'>Mask Color</label>
-                <input type='select' value='200' min='75' max='999' class='form-control' id='luchador-mask-color'>
-            </div>
+                <select class="custom-select" id='luchador-mask-color'>
+                  <option selected>Choose Trim Color</option>
+                  <option v-for='color in colors' value={{index}}>{{color}}</option>
+                  
+                </select></div>
             <div class='form-group'>
                 <label for='luchador-trim-color'>Trim Color</label>
                 <select class="custom-select" id='luchador-trim-color'>
                   <option selected>Choose Trim Color</option>
-                  <option value="1">Green</option>
-                  <option value="2">Orange</option>
-                  <option value="3">Yellow</option>
+                  <option v-for='color in colors' value={{index}}>{{color}}</option>
+                  
                 </select>
             </div>
         </form>
