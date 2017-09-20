@@ -23,7 +23,7 @@ h1 {
     padding-top:1em;
 }
 
- p {
+.welcome p {
     background: $light;
     margin: auto;
     width:80%;
@@ -41,6 +41,22 @@ h1 {
 .row button:nth-child(even){
     background: $quaternary-color;
     color: $secondary-color;
+}
+.rules-card {
+    background: $secondary-color;
+    position: relative;
+    bottom: 125%;
+    z-index:1;
+    border: 1em solid $quinary-color;
+    border-radius:4px;
+    
+}
+.close-card {
+    float:right;
+    margin: .5em 1em 0 0;
+}
+.rules-card p {
+    margin: .75em;
 }
 
 .scoreboard {
