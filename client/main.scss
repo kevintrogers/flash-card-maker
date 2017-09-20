@@ -31,22 +31,37 @@ h1 {
     height: 10em;
     padding:.5em 1.15em;
 }
+.btn-row {
+    text-align: center;
+}
+.row button:nth-child(odd){
+    background: $tertiary-color;
+    color: $dark;
+}
+.row button:nth-child(even){
+    background: $quaternary-color;
+    color: $secondary-color;
+}
+
 .scoreboard {
     width: 25vw;
     height: 35vh;
-    background: $light;
-    border: 15px solid $secondary-color;
+    background: $secondary-color;
+    border: 1em solid $quaternary-color;
     border-radius:4px;
     
 }
 .placard, .question-count{
-
-  color: $quinary-color;
-  text-align:center;
+  margin-left: 1.25em
+}
+.circle-img {
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
 }
 .health-meter {
-    background: $quaternary-color;
+    background: $tertiary-color;
     height: 1em;
-    width: 80%;
-    margin: .05em 1em;
+    width: 75%;
+    margin: .05em 12.5%;
 }

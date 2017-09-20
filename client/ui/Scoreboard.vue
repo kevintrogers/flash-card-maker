@@ -8,7 +8,7 @@
             </div>
             
         <div class='row'>
-                <span class='placard' id='opponent-placard'>OPPONENT</span>
+                <div class='placard' id='opponent-placard'><span>OPPONENT</span><img class='circle-img' src='http://media-cache-ak0.pinimg.com/736x/a0/b4/7b/a0b47bca16fb26652198608cf2135753.jpg'</span></div>
             </div>
             <div class='row'>
                 <div class='health-meter col-10 col-offset-1' id='opponent-health-meter'></div>
