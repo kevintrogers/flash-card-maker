@@ -52,5 +52,5 @@
     
 </script>
 <style>
-    @import url('scss/luchadorModel.scss');
+    
 </style>
