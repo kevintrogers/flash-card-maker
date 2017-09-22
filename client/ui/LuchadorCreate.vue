@@ -1,12 +1,12 @@
 <template>
-    <div class='col-xs-10 offset-xs-1'>
+    <div class='luchador-create col-12 '>
         <form>
-            <div class='form-group'>
+            <div class='form-group col-xs-10'>
                 <label for='luchador-name'>Name of Fighter</label>
                 <input type='text' class='form-control' id='luchador-name'>
             </div>
             <div class='row'>
-                <div class='form-group col-xs-6'>
+                <div class='form-group col-xs-6 '>
                     <label for='luchador-height'>Height (In Inches)</label>
                     <input class='' type='number' value='68' min='40' max='120' class='form-control' id='luchador-height'>
                 </div>
@@ -16,29 +16,49 @@
                     <input type='number' value='200' min='75' max='999' class='form-control' id='luchador-weight'>
                 </div>
             </div>
+            <div class='row'>
+                <div class='form-group col col-xs-6'>
+                    <label for='luchador-mask-color'>Mask Color</label>
+                    <select class="custom-select" id='luchador-mask-color'>
+                      <option selected>Choose Mask Color</option>
+                      <option v-for='color in colors' :value="color.index">{{color}}</option>
+                    </select>
+                </div>
+                <div class='form-group col-xs-6'>
+                    <label for='luchador-trim-color'>Trim Color</label>
+                    <select class="custom-select" id='luchador-trim-color'>
+                      <option selected>Choose Trim Color</option>
+                      <option v-for='color in colors' :value="color.index">{{color}}</option>
+                  </select>
+                </div>
+            </div> 
+            <div class='row'>
             <div class='form-group col-xs-6'>
-                <label for='luchador-mask-color'>Mask Color</label>
-                <select class="custom-select" id='luchador-mask-color'>
-                  <option selected>Choose Mask Color</option>
+                <label for='luchador-eye-color'>Eye Color</label>
+                <select class="custom-select" id='luchador-eye-color'>
+                  <option selected>Choose Eye Color</option>
                   <option v-for='color in colors' :value="color.index">{{color}}</option>
-                  
-                </select></div>
-            <div class='form-group col-xs-6'>
-                <label for='luchador-trim-color'>Trim Color</label>
-                <select class="custom-select" id='luchador-trim-color'>
-                  <option selected>Choose Trim Color</option>
-                  <option v-for='color in colors' :value="color.index">{{color}}</option>
-                  
-                </select>
+              </select>
+              </div>
+                    <div class='form-group col-xs-6'>
+                <label for='luchador-mask-style'>Mask Style</label>
+                <select class="custom-select" id='luchador-mask-style'>
+                  <option selected>Choose Mask Style</option>
+                  <option v-for='style in styles' :value="style.index">{{style}}</option>
+              </select>
+              </div>
+              </div>
+             </form> 
             </div>
-        </form>
+        
     </div>
 </template>
 <script>
 export default {
     data() {
         return {
-            colors: ['orange','yellow','red','green','purple','blue','black','white']
+            colors: ['orange','yellow','red','green','purple','blue','black','white'],
+            styles: ['Classic', 'Beast', 'Chupacabra', 'Pretty Boy', 'Royal', 'Razzle Dazzle', 'Fabulous', 'Demon']
         }
         
     }
