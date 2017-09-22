@@ -37,7 +37,7 @@
                 <label for='luchador-eye-color'>Eye Color</label>
                 <select class="custom-select" id='luchador-eye-color'>
                   <option selected>Choose Eye Color</option>
-                  <option v-for='color in colors' :value="color.index">{{color}}</option>
+                  <option v-for='eye in eyes' :value="eye.index">{{eye}}</option>
               </select>
               </div>
                     <div class='form-group col-xs-6'>
@@ -56,8 +56,10 @@
 <script>
 export default {
     data() {
+        
         return {
             colors: ['orange','yellow','red','green','purple','blue','black','white'],
+            eyes: ['lightblue', 'lightgreen', 'blue', 'lightgrey', 'green', 'brown', 'black', 'red'],
             styles: ['Classic', 'Beast', 'Chupacabra', 'Pretty Boy', 'Royal', 'Razzle Dazzle', 'Fabulous', 'Demon']
         }
         
