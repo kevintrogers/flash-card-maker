@@ -1,23 +1,23 @@
 <template>
     <div class='luchador-create col-12 '>
         <form>
-            <div class='form-group col-xs-10'>
+            <div class='form-group col-xs-10 col-xs-offset-1'>
                 <label for='luchador-name'>Name of Fighter</label>
                 <input type='text' class='form-control' id='luchador-name'>
             </div>
             <div class='row'>
-                <div class='form-group col-xs-6 '>
+                <div class='form-group col-xs-4 col-xs-offset-1 '>
                     <label for='luchador-height'>Height (In Inches)</label>
                     <input class='' type='number' value='68' min='40' max='120' class='form-control' id='luchador-height'>
                 </div>
                 
-                <div class='form-group col-xs-6'>
+                <div class='form-group col-xs-4 col-xs-offset-1'>
                     <label for='luchador-weight'>Weight (In Pounds)</label>
                     <input type='number' value='200' min='75' max='999' class='form-control' id='luchador-weight'>
                 </div>
             </div>
             <div class='row'>
-                <div class='form-group col col-xs-6'>
+                <div class='form-group col-xs-4 col-xs-offset-1'>
                     <label for='luchador-mask-color'>Mask Color</label>
                     <select class="custom-select" id='luchador-mask-color' v-model='maskColor'>
                       <option selected>Choose Mask Color</option>
@@ -25,7 +25,7 @@
                     </select>
                     
                 </div>
-                <div class='form-group col-xs-6'>
+                <div class='form-group col-xs-4 col-xs-offset-1'>
                     <label for='luchador-trim-color'>Trim Color</label>
                     <select class="custom-select" id='luchador-trim-color' v-model='trimColor'>
                       <option selected>Choose Trim Color</option>
@@ -35,7 +35,7 @@
                 </div>
             </div> 
             <div class='row'>
-            <div class='form-group col-xs-6'>
+            <div class='form-group col-xs-4 col-xs-offset-1'>
                 <label for='luchador-eye-color'>Eye Color</label>
                 <select class="custom-select" id='luchador-eye-color' v-model='eyeColor'>
                   <option selected>Choose Eye Color</option>
@@ -43,7 +43,7 @@
                 </select>
               
               </div>
-                    <div class='form-group col-xs-6'>
+                    <div class='form-group col-xs-4 col-xs-offset-1'>
                 <label for='luchador-mask-style'>Mask Style</label> 
                 <select class="custom-select" id='luchador-mask-style' v-model='maskStyle'>
                   <option selected>Choose Mask Style</option>
