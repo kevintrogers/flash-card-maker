@@ -1,6 +1,6 @@
 <template>
     <div class='box'>
-    	<div class='head'>
+    	<div class='head' :style='{background:maskColor}'>
 			<div class='mask'>
 				<div class='mask mask-left'></div>
 				<div class='mask mask-top'></div>

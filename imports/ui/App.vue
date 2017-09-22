@@ -16,7 +16,7 @@
 
 </script>
 <style>
-@import url('scss/luchadorModel.scss');
+@import url('./scss/luchadorModel.scss');
 
 
 </style>

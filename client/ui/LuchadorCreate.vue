@@ -23,15 +23,15 @@
                       <option selected>Choose Mask Color</option>
                       <option v-for='color in colors' >{{color}}</option>
                     </select>
-                    <span>{{maskColor}}</span>
+                    
                 </div>
                 <div class='form-group col-xs-6'>
                     <label for='luchador-trim-color'>Trim Color</label>
                     <select class="custom-select" id='luchador-trim-color' v-model='trimColor'>
                       <option selected>Choose Trim Color</option>
                       <option v-for='color in colors'>{{color}}</option>
-                  </select>
-                  <span>{{trimColor}}</span>
+                    </select>
+                  
                 </div>
             </div> 
             <div class='row'>
@@ -40,16 +40,16 @@
                 <select class="custom-select" id='luchador-eye-color' v-model='eyeColor'>
                   <option selected>Choose Eye Color</option>
                   <option v-for='eye in eyes'>{{eye}}</option>
-              </select>
-              <span>{{eyeColor}}</span>
+                </select>
+              
               </div>
                     <div class='form-group col-xs-6'>
                 <label for='luchador-mask-style'>Mask Style</label> 
                 <select class="custom-select" id='luchador-mask-style' v-model='maskStyle'>
                   <option selected>Choose Mask Style</option>
                   <option v-for='style in styles'>{{style}}</option>
-              </select>
-              <span>{{maskStyle}}</span>
+                 </select>
+              
               </div>
               </div>
              </form> 
