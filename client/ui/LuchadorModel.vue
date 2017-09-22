@@ -45,11 +45,12 @@
 					<div class='medallion valign-wrapper '><span class='center valign'>CHAMPION</span></div>
 					</div>
 					</div>			
+	    </div>
 	</div>
     
 </template>
 <script>
-    
+   import Luchador from './LuchadorCreate.vue'; 
 </script>
 <style>
     

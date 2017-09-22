@@ -19,33 +19,37 @@
             <div class='row'>
                 <div class='form-group col col-xs-6'>
                     <label for='luchador-mask-color'>Mask Color</label>
-                    <select class="custom-select" id='luchador-mask-color'>
+                    <select class="custom-select" id='luchador-mask-color' v-model='maskColor'>
                       <option selected>Choose Mask Color</option>
-                      <option v-for='color in colors' :value="color.index">{{color}}</option>
+                      <option v-for='color in colors' >{{color}}</option>
                     </select>
+                    <span>{{maskColor}}</span>
                 </div>
                 <div class='form-group col-xs-6'>
                     <label for='luchador-trim-color'>Trim Color</label>
-                    <select class="custom-select" id='luchador-trim-color'>
+                    <select class="custom-select" id='luchador-trim-color' v-model='trimColor'>
                       <option selected>Choose Trim Color</option>
-                      <option v-for='color in colors' :value="color.index">{{color}}</option>
+                      <option v-for='color in colors'>{{color}}</option>
                   </select>
+                  <span>{{trimColor}}</span>
                 </div>
             </div> 
             <div class='row'>
             <div class='form-group col-xs-6'>
                 <label for='luchador-eye-color'>Eye Color</label>
-                <select class="custom-select" id='luchador-eye-color'>
+                <select class="custom-select" id='luchador-eye-color' v-model='eyeColor'>
                   <option selected>Choose Eye Color</option>
-                  <option v-for='eye in eyes' :value="eye.index">{{eye}}</option>
+                  <option v-for='eye in eyes'>{{eye}}</option>
               </select>
+              <span>{{eyeColor}}</span>
               </div>
                     <div class='form-group col-xs-6'>
-                <label for='luchador-mask-style'>Mask Style</label>
-                <select class="custom-select" id='luchador-mask-style'>
+                <label for='luchador-mask-style'>Mask Style</label> 
+                <select class="custom-select" id='luchador-mask-style' v-model='maskStyle'>
                   <option selected>Choose Mask Style</option>
-                  <option v-for='style in styles' :value="style.index">{{style}}</option>
+                  <option v-for='style in styles'>{{style}}</option>
               </select>
+              <span>{{maskStyle}}</span>
               </div>
               </div>
              </form> 
@@ -54,6 +58,21 @@
     </div>
 </template>
 <script>
+export default {
+    data() {
+        
+        return {
+            maskColor: '',
+            trimColor: '',
+            eyeColor: '',
+            maskStyle: '',
+            colors: ['orange','yellow','red','green','purple','blue','black','white'],
+            eyes: ['lightblue', 'lightgreen', 'blue', 'lightgrey', 'green', 'brown', 'black', 'red'],
+            styles: ['Classic', 'Beast', 'Chupacabra', 'Pretty Boy', 'Royal', 'Razzle Dazzle', 'Fabulous', 'Demon']
+        }
+        
+    }
+}
 
     
 </script>
