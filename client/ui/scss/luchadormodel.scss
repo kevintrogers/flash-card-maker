@@ -121,26 +121,7 @@ clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
      
    }
 
-   .single-tear-base {
-       position: absolute;
-       width:2%;
-       height: 4%;
-       top: 45%;
-       left: 33%;
-       background: lightblue;
-       -webkit-clip-path: polygon(50% 0%, 100% 70%, 0 70%);
-clip-path: polygon(50% 0%, 100% 70%, 0 70%);
-   }
-   .single-tear-drop {
-        position: absolute;
-    width: 1.8%;
-    height: 2%;
-    top: 47%;
-    left: 33.1%;
-       background: lightblue;
-       -webkit-clip-path: circle(50% at 50% 50%);
-clip-path: circle(50% at 50% 50%);
-   }
+
    .lens-left{
        position: absolute;
        padding:10%;
@@ -426,10 +407,3 @@ clip-path: circle(50% at 50% 50%);
     font-family: 'Mandali', sans-serif;
 }
 /* animations*/
-.roll-base {
-    animation:  $tear-time roll-base infinite;
-}
-.roll-drop {
-    animation:  $tear-time roll-drop infinite;
-    
-}

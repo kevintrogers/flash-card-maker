@@ -11,9 +11,7 @@
 				<div class='mask lens-left'></div>
 				</div>
 					<div class='eye eye-left'><div class='brow'></div><div class='iris'><div class='pupil'></div></div></div>
-					
-					<div class='single-tear-base'></div>
-					<div class='single-tear-drop'></div>
+			
 				
 				<div class='lens-right-border'> 
 					<div class='mask lens-right'></div>	
