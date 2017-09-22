@@ -46,6 +46,7 @@ margin:auto;
 display:block;
 padding: 5em;
 background: linear-gradient(-45deg, #fff, #707070,  #fff, #707070,#fff, #707070, #fff);
+z-index:-2;
 }
 
 .head {
@@ -208,7 +209,7 @@ left: 24%;
    border-radius: 0 0 50% 50%;
    top:95%;
    left: 37.5%;
-   z-index: -2;
+   z-index: -1;
 }
 .singlet {
    position: absolute;
