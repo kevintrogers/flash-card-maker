@@ -84,7 +84,7 @@
 					
 			</div>
 
-			<div class='singlet'></div>
+			<div class='singlet' :style="{background:maskColor}"></div>
 			<div class='neck'></div>
 				
 				<div class='shoulder-left'></div>
