@@ -19,7 +19,7 @@
             </div>
             <div class='row'>
                 <div class='form-group col-xs-4 col-xs-offset-1'>
-                    <label for='luchador-mask-color'>Mask Color</label>
+                    <label for='luchador-mask-color'>Mask Color</label><br>
                     <select class="custom-select" id='luchador-mask-color' v-model='maskColor'>
                       <option selected>Choose Mask Color</option>
                       <option v-for='color in colors' :style='{color:color}'>{{color}}</option>
@@ -27,7 +27,7 @@
                     
                 </div>
                 <div class='form-group col-xs-4 col-xs-offset-1'>
-                    <label for='luchador-trim-color'>Trim Color</label>
+                    <label for='luchador-trim-color'>Trim Color</label><br>
                     <select class="custom-select" id='luchador-trim-color' v-model='trimColor'>
                       <option selected>Choose Trim Color</option>
                       <option v-for='color in colors' :style='{color:color}'>{{color}}</option>
@@ -37,7 +37,7 @@
             </div> 
             <div class='row'>
             <div class='form-group col-xs-4 col-xs-offset-1'>
-                <label for='luchador-eye-color'>Eye Color</label>
+                <label for='luchador-eye-color'>Eye Color</label><br>
                 <select class="custom-select" id='luchador-eye-color' v-model='eyeColor'>
                   <option selected>Choose Eye Color</option>
                   <option v-for='eye in eyes' :style='{color:eye}'>{{eye}}</option>
@@ -45,7 +45,7 @@
               
               </div>
                     <div class='form-group col-xs-4 col-xs-offset-1'>
-                <label for='luchador-mask-style'>Mask Style</label> 
+                <label for='luchador-mask-style'>Mask Style</label><br> 
                 <select class="custom-select" id='luchador-mask-style' v-model='maskStyle'>
                   <option selected>Choose Mask Style</option>
                   <option v-for='style in styles'>{{style}}</option>
