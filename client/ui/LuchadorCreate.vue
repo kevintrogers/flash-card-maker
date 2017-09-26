@@ -22,7 +22,7 @@
                     <label for='luchador-mask-color'>Mask Color</label>
                     <select class="custom-select" id='luchador-mask-color' v-model='maskColor'>
                       <option selected>Choose Mask Color</option>
-                      <option v-for='color in colors' >{{color}}</option>
+                      <option v-for='color in colors' :style='{color:color}'>{{color}}</option>
                     </select>
                     
                 </div>
@@ -30,7 +30,7 @@
                     <label for='luchador-trim-color'>Trim Color</label>
                     <select class="custom-select" id='luchador-trim-color' v-model='trimColor'>
                       <option selected>Choose Trim Color</option>
-                      <option v-for='color in colors'>{{color}}</option>
+                      <option v-for='color in colors' :style='{color:color}'>{{color}}</option>
                     </select>
                   
                 </div>
@@ -40,7 +40,7 @@
                 <label for='luchador-eye-color'>Eye Color</label>
                 <select class="custom-select" id='luchador-eye-color' v-model='eyeColor'>
                   <option selected>Choose Eye Color</option>
-                  <option v-for='eye in eyes'>{{eye}}</option>
+                  <option v-for='eye in eyes' :style='{color:eye}'>{{eye}}</option>
                 </select>
               
               </div>
@@ -124,6 +124,17 @@ export default {
             styles: ['Classic', 'Beast', 'Chupacabra', 'Pretty Boy', 'Royal', 'Razzle Dazzle', 'Fabulous', 'Demon']
         }
         
+        
+    },
+    computed: {
+        getCostumeBackground: function () {
+            let vm = this;
+            return {
+                background: 'pink',
+                width: 3 + 'px',
+                height: 1.25+'em'
+            };
+        }
     }
 }
 
