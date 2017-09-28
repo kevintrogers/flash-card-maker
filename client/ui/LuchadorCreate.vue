@@ -52,7 +52,10 @@
                  </select>
               
               </div>
-              <button class='btn btn-primary'type='button'>Create</button>
+
+              </div>
+              <div class='row btn-row'>
+                  <button class='btn btn-primary'type='button'>Create</button>
               </div>
              </form> 
              
