@@ -1,4 +1,4 @@
-<template>
+<template name='luchadorCreateForm'>
     <div>
     <div class='luchador-create col-12 '>
         <form>
@@ -52,6 +52,7 @@
                  </select>
               
               </div>
+              <button class='btn btn-primary'type='button'>Create</button>
               </div>
              </form> 
              
@@ -112,8 +113,9 @@
 <script>
 export default {
     
+    
+    
     data() {
-        
         return {
             maskColor: '',
             trimColor: '',
@@ -123,19 +125,24 @@ export default {
             eyes: ['lightblue', 'lightgreen', 'blue', 'lightgrey', 'green', 'brown', 'black', 'red'],
             styles: ['Classic', 'Beast', 'Chupacabra', 'Pretty Boy', 'Royal', 'Razzle Dazzle', 'Fabulous', 'Demon']
         }
-        
-        
     },
-    computed: {
-        getCostumeBackground: function () {
-            let vm = this;
-            return {
-                background: 'pink',
-                width: 3 + 'px',
-                height: 1.25+'em'
-            };
-        }
+        methods: {
+            setLuchador: function () {
+            let name = document.getElementById('luchadorName').value, 
+            height = document.getElementById('luchadorHeight').value, 
+            weight = document.getElementById('luchadorWeight').value, 
+            mainColor = document.getElementById('mainColor').value, 
+            trimColor = document.getElementById('trimCOlor').value,
+            eyeColor = document.getElementById('eyeColor').value,
+            maskStyle = document.getElementById('maskStyle').value;
+            
+            Luchadors.upsert({ name: name, height: height, weight: weight, mainColor: mainColor, trimColor: trimColor, eyeColor: eyeColor, maskStyle: maskStyle });
+            
+                
+            }
+        
     }
+
 }
 
     
