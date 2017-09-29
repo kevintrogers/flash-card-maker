@@ -4,23 +4,23 @@
         <form>
             <div class='form-group col-xs-10 col-xs-offset-1'>
                 <label for='luchador-name'>Name of Fighter</label>
-                <input type='text' class='form-control' id='luchador-name'>
+                <input type='text' class='form-control' id='luchadorName'>
             </div>
             <div class='row'>
                 <div class='form-group col-xs-4 col-xs-offset-1 '>
                     <label for='luchador-height'>Height (In Inches)</label>
-                    <input class='' type='number' value='68' min='40' max='120' class='form-control' id='luchador-height'>
+                    <input class='' type='number' value='68' min='40' max='120' class='form-control' id='luchadorHeight'>
                 </div>
                 
                 <div class='form-group col-xs-4 col-xs-offset-1'>
                     <label for='luchador-weight'>Weight (In Pounds)</label>
-                    <input type='number' value='200' min='75' max='999' class='form-control' id='luchador-weight'>
+                    <input type='number' value='200' min='75' max='999' class='form-control' id='luchadorWeight'>
                 </div>
             </div>
             <div class='row'>
                 <div class='form-group col-xs-4 col-xs-offset-1'>
                     <label for='luchador-mask-color'>Mask Color</label><br>
-                    <select class="custom-select" id='luchador-mask-color' v-model='maskColor'>
+                    <select class="custom-select" id='mainColor' v-model='maskColor'>
                       <option selected>Choose Mask Color</option>
                       <option v-for='color in colors' :style='{color:color}'>{{color}}</option>
                     </select>
@@ -28,7 +28,7 @@
                 </div>
                 <div class='form-group col-xs-4 col-xs-offset-1'>
                     <label for='luchador-trim-color'>Trim Color</label><br>
-                    <select class="custom-select" id='luchador-trim-color' v-model='trimColor'>
+                    <select class="custom-select" id='trimColor' v-model='trimColor'>
                       <option selected>Choose Trim Color</option>
                       <option v-for='color in colors' :style='{color:color}'>{{color}}</option>
                     </select>
@@ -38,7 +38,7 @@
             <div class='row'>
             <div class='form-group col-xs-4 col-xs-offset-1'>
                 <label for='luchador-eye-color'>Eye Color</label><br>
-                <select class="custom-select" id='luchador-eye-color' v-model='eyeColor'>
+                <select class="custom-select" id='eyeColor' v-model='eyeColor'>
                   <option selected>Choose Eye Color</option>
                   <option v-for='eye in eyes' :style='{color:eye}'>{{eye}}</option>
                 </select>
@@ -46,7 +46,7 @@
               </div>
                     <div class='form-group col-xs-4 col-xs-offset-1'>
                 <label for='luchador-mask-style'>Mask Style</label><br> 
-                <select class="custom-select" id='luchador-mask-style' v-model='maskStyle'>
+                <select class="custom-select" id='maskStyle' v-model='maskStyle'>
                   <option selected>Choose Mask Style</option>
                   <option v-for='style in styles'>{{style}}</option>
                  </select>
@@ -55,7 +55,7 @@
 
               </div>
               <div class='row btn-row'>
-                  <button class='btn btn-primary'type='button'>Create</button>
+                  <button class='btn btn-primary'type='button' @click='setLuchador'>Create</button>
               </div>
              </form> 
              
@@ -135,7 +135,7 @@ export default {
             height = document.getElementById('luchadorHeight').value, 
             weight = document.getElementById('luchadorWeight').value, 
             mainColor = document.getElementById('mainColor').value, 
-            trimColor = document.getElementById('trimCOlor').value,
+            trimColor = document.getElementById('trimClor').value,
             eyeColor = document.getElementById('eyeColor').value,
             maskStyle = document.getElementById('maskStyle').value;
             
