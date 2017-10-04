@@ -11,6 +11,18 @@
     </div>
 </template>
 <script>
+import LuchadorCreate from '../../client/ui/LuchadorCreate.vue';
+
+export default {
+    data() {
+        return {
+            
+        };
+    },
+    components: {
+        LuchadorCreate
+    }
+};
 
 
 

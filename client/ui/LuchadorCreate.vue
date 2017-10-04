@@ -1,7 +1,7 @@
 <template name='luchadorCreateForm'>
     <div>
     <div class='luchador-create col-12 '>
-        <form>
+        <form id='luchador-create-form'>
             <div class='form-group col-xs-10 col-xs-offset-1'>
                 <label for='luchador-name'>Name of Fighter</label>
                 <input type='text' class='form-control' id='luchadorName'>
@@ -90,6 +90,7 @@
 
 			<div class='singlet' :style="{background:maskColor}"></div>
 			<div class='neck'></div>
+			
 				
 				<div class='shoulder-left'></div>
 				<div class='upper-arm-left'></div>
@@ -114,10 +115,9 @@
     
 </template>
 <script>
+
+
 export default {
-    
-    
-    
     data() {
         return {
             maskColor: '',
@@ -127,26 +127,34 @@ export default {
             colors: ['orange','yellow','red','green','purple','blue','black','white'],
             eyes: ['lightblue', 'lightgreen', 'blue', 'lightgrey', 'green', 'brown', 'black', 'red'],
             styles: ['Classic', 'Beast', 'Chupacabra', 'Pretty Boy', 'Royal', 'Razzle Dazzle', 'Fabulous', 'Demon']
-        }
+        };
     },
+    
         methods: {
             setLuchador: function () {
-            let name = document.getElementById('luchadorName').value, 
-            height = document.getElementById('luchadorHeight').value, 
-            weight = document.getElementById('luchadorWeight').value, 
-            mainColor = document.getElementById('mainColor').value, 
-            trimColor = document.getElementById('trimClor').value,
-            eyeColor = document.getElementById('eyeColor').value,
-            maskStyle = document.getElementById('maskStyle').value;
-            
-            Luchadors.upsert({ name: name, height: height, weight: weight, mainColor: mainColor, trimColor: trimColor, eyeColor: eyeColor, maskStyle: maskStyle });
-            
+                var name = document.getElementById('luchadorName').text.value, 
+                height = document.getElementById('luchadorHeight').value, 
+                weight = document.getElementById('luchadorWeight').value, 
+                mainColor = document.getElementById('mainColor').value, 
+                trimColor = document.getElementById('trimColor').value,
+                eyeColor = document.getElementById('eyeColor').value,
+                maskStyle = document.getElementById('maskStyle').value,
+                luchador = { 'name': name, 
+                            'height': height, 
+                            'weight': weight, 
+                            'mainColor': mainColor, 
+                            'trimColor': trimColor, 
+                            'eyeColor': eyeColor, 
+                            'maskStyle': maskStyle };
                 
+                
+                Meteor.call('addLuchador', luchador);
+            
             }
-        
-    }
+        }
+    };
 
-}
+
 
     
 </script>
