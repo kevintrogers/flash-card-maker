@@ -1,5 +1,5 @@
 {
-  "name": "t-brawl",
+  "name": "flash-card",
   "private": true,
   "scripts": {
     "start": "meteor run"

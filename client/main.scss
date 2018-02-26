@@ -1,90 +1,86 @@
-$primary-color: limegreen;
-$secondary-color: lightgreen;
-$tertiary-color: yellow;
-$quaternary-color: darkgreen;
-$quinary-color: green;
-$light: #fff;
-$dark: #242424;
-body {
-    background: $primary-color;
-    font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+html {
+  background: lightblue;
 }
-h1 {
-    text-align: center;
-    color: $tertiary-color;
+label {
+  position:relative;
+  left: 1.5em;
+  font-weight:100;
 }
-.welcome {
-    background: $secondary-color;
-    margin-left:auto;
-    margin-right:auto;
-    width:50%;
-    border-radius:4px;
-    height:12em;
-    padding-top:1em;
+#remove{
+  position:relative;
+  bottom: 1.5em;
+  margin-bottom: -1.25em;
+}
+.card-list {
+  background: lightblue;
+  padding-top: .75em;
+}
+.card {
+  height: 100%;
+  margin: .75em auto;
+}
+.card-content{
+  border-top: 1px solid lightblue;
 }
 
-.welcome p {
-    background: $light;
-    margin: auto;
-    width:80%;
+.my-modal {
+    display:block;
+    position: fixed;
+    top:16.6667%;
+    left:16.6667%;
+    width:66.6667%;
+    z-index:999;
+    margin:.3%;
+    background: violet;
     border-radius:4px;
-    height: 10em;
-    padding:.5em 1.15em;
 }
-.btn-row {
-    text-align: center;
+.exit {
+  float: right;
+    color: #282828;
+    margin-right:.5em;
+    margin-left:auto;
 }
-.row button:nth-child(odd){
-    background: $tertiary-color;
-    color: $dark;
+
+.my-modal a {
+  color: rebeccapurple;
 }
-.row button:nth-child(even){
-    background: $quaternary-color;
-    color: $secondary-color;
+.modal-content{
+   margin: 0 1.25% 1.25% ;
+   width: 97.5%;
+   padding:.35em 1.15em .15em; 
+   border-color: purple;
 }
-.rules-card {
-    background: $secondary-color;
-    position: relative;
-    bottom: 125%;
-    z-index:1;
-    border: 1em solid $quinary-color;
-    border-radius: 4px;
+.modal-content p {
+    text-align: left;
+    font-family: Ubuntu Mono;
 }
-.close-card {
-    float:right;
-    margin: .5em 1em 0 0;
+.btn {
+  color: white;
 }
-.rules-card p {
-    margin: .75em;
+.desc-btn {
+  background: purple;
 }
-select option{
-    background: $primary-color;
+.use-case-btn {
+  background: violet;
 }
-.scoreboard {
-    width: 25vw;
-    height: 35vh;
-    background: $secondary-color;
-    border: 1em solid $quaternary-color;
-    border-radius:4px;
-    
+.example-btn {
+  background: rebeccapurple;
 }
-.placard, .question-count{
-  margin-left: 1.25em
+.card .btn-group {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1em;
 }
-.circle-img {
-    height: 3em;
-    width: 3em;
-    border-radius: 50%;
+.btn-group, .example, h1 {
+  text-align:center;
+  
 }
-.health-meter {
-    background: $tertiary-color;
-    height: 1em;
-    width: 75%;
-    margin: .05em 12.5%;
+.btn-down{
+  background:purple;
 }
-.luchador-create  {
-    color: $dark;
-    background: $secondary-color;
-    border: 1em solid $quinary-color;
-    border-radius: 4px;
+
+.btn-up{
+    background:rebeccapurple;
 }
