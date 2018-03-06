@@ -1,6 +1,8 @@
 <template>
   
   <div class='card-list' >
+                 
+              
     <h1>Design Pattern Flash Cards</h1>
     <div v-for="(pattern, i) in patterns">
       <div class='card col-8 offset-2' v-if="counter === i && !showExample">
