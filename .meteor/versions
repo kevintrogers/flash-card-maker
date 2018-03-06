@@ -7,6 +7,7 @@ akryum:vue-component@0.13.1
 akryum:vue-component-dev-client@0.4.1
 akryum:vue-component-dev-server@0.1.0
 akryum:vue-sass@0.1.0
+aldeed:autoform@6.3.0
 alexwine:bootstrap-4@4.0.0-beta.2
 allow-deny@1.1.0
 autopublish@1.0.7
@@ -78,6 +79,7 @@ mobile-experience@1.0.5
 mobile-status-bar@1.0.14
 modules@0.11.5
 modules-runtime@0.9.2
+momentjs:moment@2.10.6
 mongo@1.4.5
 mongo-dev-server@1.1.0
 mongo-id@1.0.6
