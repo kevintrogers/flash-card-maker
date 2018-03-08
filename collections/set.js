@@ -18,38 +18,7 @@ CardSet.allow({
 
 
 
-CardSchema = new SimpleSchema ({
-    name: {
-        label: "name",
-        type: String
-    },
-    amount: {
-        label: "amount",
-        type: "String"
-    },
-    author: {
-        type: String,
-        label: "Author",
-        autoform: {
-            type: "hidden"
-        },
-        autoValue: function(){
-            return this.userId;
-        },
-    },
-    createdAt: {
-        type: Date,
-        label: "CreatedAt",
-        autoform: {
-            type: "hidden"
-        },
-        autoValue: function() {
-            return new Date();
-        }
-    }
-});
-
-RecipeSchema = new SimpleSchema({
+CardSchema = new SimpleSchema({
     
     name: {
         label: "Name",
@@ -59,7 +28,7 @@ RecipeSchema = new SimpleSchema({
         type: Array
      },
      "set.$": Object,
-     "set.$.name": String,
+     "set.$.problem": String,
      "set.$.answer": String,
      "set.$.explanation": String,
       inSet: {
