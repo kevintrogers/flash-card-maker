@@ -2,7 +2,6 @@ import SimpleSchema from 'simpl-schema';
 SimpleSchema.extendOptions(['autoform']);
 
 CardSet = new Mongo.Collection('cardSet');
-ShoppingItems = new Mongo.Collection('shoppingList');
 
 
 CardSet.allow({
@@ -65,14 +64,7 @@ CardSchema = new SimpleSchema({
 
 
 Meteor.methods({
-    toggleMenuItem: function(id, currentMenuState){
-        Recipes.update(id, {
-            $set: {
-                inMenu: !currentMenuState
-            }
-        });
-        
-    },
+
     deleteSet: function(id) {
         CardSet.remove(id);
     }
