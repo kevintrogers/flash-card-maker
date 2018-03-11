@@ -56,6 +56,8 @@ export default {
   data: function () {
     return {
     counter: 0,
+    addSet: false,
+    practiceTime: false,
     showDescription: true,
     showUseCase: false,
     showExample: false,
